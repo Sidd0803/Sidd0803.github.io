@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Saha — Portfolio</title>
+<meta name="description" content="Siddharth Saha — Agentic systems engineer building production LLM agents. Northwestern CS grad, equity derivatives trader pivoting into AI-native engineering.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="#top" class="logo">SS</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section id="top" class="hero container">
+    <p class="eyebrow">Agentic Systems Engineer</p>
+    <h1>Siddharth Saha</h1>
+    <p class="hero-sub">
+      Equity derivatives trader turned agent builder. I design and ship LLM-powered
+      systems — retrieval, tool-use, multi-step orchestration — and I'm looking to bring
+      that to a forward-deployed engineering role at an AI-native startup.
+    </p>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="mailto:siddharthsaha03@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/siddharth-saha" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- TODO: add GitHub profile link once handle is confirmed, e.g.
+      <a class="btn" href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a> -->
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h2>About</h2>
+    <p>
+      I'm a Northwestern CS graduate (Math minor, GPA 3.89) currently working as an
+      Equity Derivatives Trader at WallachBeth Capital, where I build the Python
+      automation that parses, validates, and routes trade confirmations across internal
+      and external systems. Before that, I built ML systems ranging from a CNN-based
+      skin cancer classifier to a Retrieval-Augmented Generation research assistant.
+    </p>
+    <p>
+      I'm actively pivoting into agentic systems engineering — designing LLM agents that
+      plan, call tools, recover from failure, and hold up in production, not just in a
+      demo. My near-term goal is a forward-deployed engineer or software engineer role
+      at an AI-native company in NYC or SF, where I can pair deep technical build work
+      with direct customer problem-solving.
+    </p>
+  </section>
+
+  <section id="experience" class="container section">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Equity Derivatives Trader — WallachBeth Capital</h3>
+        <span class="entry-date">Jul 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Build Python automation pipelines to parse, validate, and route trade confirmations across internal and external systems, reducing manual processing time and operational errors.</li>
+        <li>Facilitate large institutional options trades, employing algorithmic trading to achieve best execution for customers.</li>
+        <li>Develop scripts to generate bespoke customer reports on sector-specific option pricing trends.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>ML Software Engineering Intern — Xenon Health</h3>
+        <span class="entry-date">Jun 2024 – Sep 2024</span>
+      </div>
+      <ul>
+        <li>Developed a medical billing platform in React to streamline revenue logging for 100+ employees.</li>
+        <li>Used S3 for file storage and AWS Lambda for NLP analysis on healthcare documents.</li>
+        <li>Built a PyTorch LSTM model to analyze revenue trends and flag unprofitable company sites.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Software Engineering Intern — AI4School (Ludwig Maximilian Institute, Munich)</h3>
+        <span class="entry-date">Jun 2023 – Sep 2023</span>
+      </div>
+      <ul>
+        <li>Engineered a web-learning platform for an edtech startup teaching 500+ students interactive physics.</li>
+        <li>Contributed to a large JavaScript codebase computing student performance metrics.</li>
+        <li>Built an RNN model in PyTorch to dynamically track performance and personalize feedback.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Security and Privacy Intern — IoT Leaks Research Project, Northwestern CS</h3>
+        <span class="entry-date">Jun 2022 – Sep 2022</span>
+      </div>
+      <ul>
+        <li>Investigated privacy threats across 1,000 IoT systems discoverable via the Shodan API.</li>
+        <li>Built a framework to connect to each system over MQTT and collect passing data packets.</li>
+        <li>Ran sensitivity analysis on collected data using TF-IDF vectorization and NLP models (LDA, NMF).</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="projects" class="container section">
+    <h2>Projects</h2>
+    <p class="section-sub">Selected technical work. More detail and code available on request.</p>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-tags"><span>RAG</span><span>LLM</span><span>Vector DB</span></div>
+        <h3>Domain-Specific Research Chatbot</h3>
+        <p>Retrieval-Augmented Generation chatbot for journalistic research. Scraped and indexed 1,000+ user-defined articles via the Google News API, stored embeddings in Chroma, and served responses through the OpenAI API with a Streamlit front end.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-tags"><span>Computer Vision</span><span>PyTorch</span><span>Healthcare</span></div>
+        <h3>Skin Cancer Diagnosis App</h3>
+        <p>Led a 7-person team building a telehealth app classifying 8 categories of skin cancer. Trained a ResNet-18 CNN on healthcare imaging datasets; shipped a React mobile front end with a Flask backend and Firebase image storage.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-tags"><span>Generative AI</span><span>PyTorch</span></div>
+        <h3>Diffusion Generative Model</h3>
+        <p>Trained a diffusion model from scratch to generate scenic landscape images — implemented the forward/reverse noising process and denoising network without relying on pretrained weights.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-tags"><span>Systems</span><span>Compilers</span></div>
+        <h3>Custom Language Interpreter</h3>
+        <p>Built a language interpreter from scratch, implementing recursion, garbage collection, and first-class functions.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-tags"><span>LLM</span><span>Web Scraping</span></div>
+        <h3>Tenant Aid Chatbot</h3>
+        <p>LLM-powered assistant using the ChatGPT API and web scraping to route tenants to the right housing resources.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-tags"><span>Backend</span><span>MongoDB</span></div>
+        <h3>Food Rating Platform</h3>
+        <p>Backend serving 5,000+ Northwestern students, built with MongoDB and a Selenium-based scraper for restaurant data.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills" class="container section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>Python, TypeScript, JavaScript, C, C++, Java, SQL, C#, MATLAB</p>
+      </div>
+      <div class="skill-group">
+        <h4>AI / Agent Frameworks</h4>
+        <p>LangChain, LangGraph, OpenAI API, PyTorch, Scikit-Learn, NumPy, Pandas, HuggingFace</p>
+      </div>
+      <div class="skill-group">
+        <h4>Agentic Patterns &amp; Models</h4>
+        <p>RAG, tool-use / function calling, multi-step orchestration, LSTMs, RNNs, CNNs, Diffusion Models</p>
+      </div>
+      <div class="skill-group">
+        <h4>Cloud &amp; Backend</h4>
+        <p>AWS (EC2, Lambda, S3), GCP, Docker, MongoDB, Firebase, React, Node.js, Flask, Streamlit</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="container section">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Northwestern University, McCormick School of Engineering</h3>
+        <span class="entry-date">Graduated June 2025</span>
+      </div>
+      <p>B.S. in Computer Science, Mathematics Minor — GPA 3.89/4.00</p>
+    </div>
+  </section>
+
+  <section id="awards" class="container section">
+    <h2>Leadership &amp; Awards</h2>
+    <ul class="plain-list">
+      <li><strong>Most Impactful Software Product Award</strong> — Northwestern IEEE Technical Showcase, June 2024</li>
+      <li><strong>Technical Director</strong> — IEEE Executive Board, June 2023 – Present</li>
+      <li><strong>Best Design Award</strong> — Northwestern School of Engineering Projects, Dec 2021</li>
+      <li>Member — Responsible AI Club, Software Dev for Social Change, Northwestern Quant Tech Club</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="container section contact">
+    <h2>Get in touch</h2>
+    <p>Open to forward-deployed engineer and software engineer roles at AI-native companies in NYC and SF.</p>
+    <a class="btn btn-primary" href="mailto:siddharthsaha03@gmail.com">siddharthsaha03@gmail.com</a>
+  </section>
+
+</main>
+
+<footer class="site-footer container">
+  <p>&copy; 2026 Siddharth Saha</p>
+</footer>
+
+</body>
+</html>
