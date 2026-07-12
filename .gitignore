@@ -1,0 +1,6 @@
+# Editor / tool cruft
+.Rhistory
+.DS_Store
+
+# Local session notes (not for publishing)
+SESSION-SUMMARY.md
