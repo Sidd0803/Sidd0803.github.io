@@ -238,6 +238,35 @@ body {
 
 .work-card:last-child { margin-bottom: 0; }
 
+/* Screenshot preview banner (bleeds to the card's padded edges) */
+.work-shot {
+  display: block;
+  margin: -26px -28px 22px;
+  height: 260px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  border-radius: 12px 12px 0 0;
+  background: #f4f5f7;
+}
+
+.work-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.work-shot:hover img {
+  opacity: 0.92;
+  transform: scale(1.015);
+}
+
+@media (max-width: 600px) {
+  .work-shot { height: 180px; }
+}
+
 .work-head h3 {
   margin: 0 0 2px;
   font-size: 1.35rem;
