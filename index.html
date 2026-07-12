@@ -115,33 +115,20 @@
 
   <section id="work" class="container section">
     <h2>Featured Work</h2>
-    <p class="section-sub">Recent end-to-end systems — the problem, how they're built, and the parts that were actually hard.</p>
+    <p class="section-sub">Recent end-to-end systems I've designed and shipped.</p>
 
     <article class="work-card">
       <div class="work-head">
         <h3>PitchList</h3>
         <p class="work-tagline">AI sales-intelligence platform for roofing distributor reps</p>
       </div>
-      <div class="project-tags"><span>Agent</span><span>FastAPI</span><span>Postgres</span><span>Next.js</span><span>OpenAI</span><span>Playwright</span></div>
-
-      <div class="work-body">
-        <div class="work-block">
-          <h4>Problem</h4>
-          <p>Roofing-distributor sales reps prioritize contractor leads by hand — signal is scattered across GAF profiles, reviews, and websites, with no fast way to know who's worth calling first.</p>
-        </div>
-        <div class="work-block">
-          <h4>What it does</h4>
-          <p>Scrapes public GAF contractor listings for a territory, scores every lead 0–100 on explainable market-opportunity signals, and generates a per-account sales brief — priority reason, likely needs, talking points, a suggested opener, risks, and next action. Reps work leads through a CRM-style prioritized list, a lifecycle Kanban, and detail pages, with an on-demand deep-research dive per contractor.</p>
-        </div>
-        <div class="work-block">
-          <h4>How it's built</h4>
-          <p>Python/FastAPI backend over Postgres (SQLAlchemy + Alembic), a Playwright scraper with idempotent upserts and full provenance, and the OpenAI Responses API producing structured JSON for scoring and briefs. Optional Perplexity enrichment (<code>sonar-pro</code> batch, <code>sonar-deep-research</code> on demand) adds external web signal. Next.js/TypeScript frontend; deployed on Render + Vercel. Built as a monorepo behind a frozen backend/frontend API contract so the API and UI could progress in parallel.</p>
-        </div>
-        <div class="work-block">
-          <h4>The hard part</h4>
-          <p>Keeping the lead score <em>deterministic and explainable</em> rather than a black-box LLM number, so a rep can see why a lead ranks where it does. And drawing a clean seam — a frozen OpenAPI contract — between a scraper/AI pipeline and the UI, with the expensive agentic deep-research kept async and out of the batch path.</p>
-        </div>
-      </div>
+      <p class="work-summary">Scrapes a sales territory's roofing contractors, scores each lead 0–100 with an explainable model, and drafts a ready-to-use sales brief — so reps know who to call first, and why.</p>
+      <ul class="work-highlights">
+        <li>Deterministic, explainable lead scoring — not a black-box LLM number.</li>
+        <li>Structured-output sales briefs, plus an on-demand agentic deep-research dive per account.</li>
+        <li>Frozen API contract between the scraper/AI pipeline and the UI, so both could evolve in parallel.</li>
+      </ul>
+      <div class="project-tags"><span>FastAPI</span><span>Postgres</span><span>Playwright</span><span>OpenAI</span><span>Perplexity</span><span>Next.js</span></div>
       <!-- TODO(links): public repo URL? live demo URL? short screen recording? -->
     </article>
 
@@ -150,13 +137,13 @@
         <h3>ClaimsTriage</h3>
         <p class="work-tagline"><!-- TODO: one-line what-it-is + who it's for --></p>
       </div>
+      <p class="work-summary"><!-- TODO: one-sentence summary --></p>
+      <ul class="work-highlights">
+        <li><!-- TODO: highlight --></li>
+        <li><!-- TODO: highlight --></li>
+        <li><!-- TODO: highlight --></li>
+      </ul>
       <div class="project-tags"><!-- TODO: tags --></div>
-      <div class="work-body">
-        <div class="work-block"><h4>Problem</h4><p><!-- TODO --></p></div>
-        <div class="work-block"><h4>What it does</h4><p><!-- TODO --></p></div>
-        <div class="work-block"><h4>How it's built</h4><p><!-- TODO --></p></div>
-        <div class="work-block"><h4>The hard part</h4><p><!-- TODO --></p></div>
-      </div>
       <!-- TODO(links): repo? demo? recording? -->
     </article>
 
@@ -165,13 +152,13 @@
         <h3>PartSelect AI Assistant</h3>
         <p class="work-tagline"><!-- TODO: one-line what-it-is + who it's for --></p>
       </div>
+      <p class="work-summary"><!-- TODO: one-sentence summary --></p>
+      <ul class="work-highlights">
+        <li><!-- TODO: highlight --></li>
+        <li><!-- TODO: highlight --></li>
+        <li><!-- TODO: highlight --></li>
+      </ul>
       <div class="project-tags"><!-- TODO: tags --></div>
-      <div class="work-body">
-        <div class="work-block"><h4>Problem</h4><p><!-- TODO --></p></div>
-        <div class="work-block"><h4>What it does</h4><p><!-- TODO --></p></div>
-        <div class="work-block"><h4>How it's built</h4><p><!-- TODO --></p></div>
-        <div class="work-block"><h4>The hard part</h4><p><!-- TODO --></p></div>
-      </div>
       <!-- TODO(links): repo? demo? recording? -->
     </article>
   </section>
