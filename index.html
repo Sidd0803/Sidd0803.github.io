@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Siddharth Saha — Portfolio</title>
-<meta name="description" content="Siddharth Saha — Agentic systems engineer building production LLM agents. Northwestern CS grad, equity derivatives trader pivoting into AI-native engineering.">
+<meta name="description" content="Siddharth Saha — Northwestern CS graduate. An overview of my software, machine learning, and agentic systems engineering work.">
 <!-- Keep this site out of search engines / discovery (Option A: unlisted). -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="style.css">
@@ -27,13 +27,12 @@
 <main>
 
   <section id="top" class="hero container">
-    <p class="prepared-for" id="prepared-for" hidden></p>
     <p class="eyebrow">Agentic Systems Engineer</p>
     <h1>Siddharth Saha</h1>
     <p class="hero-sub">
-      Equity derivatives trader turned agent builder. I design and ship LLM-powered
-      systems — retrieval, tool-use, multi-step orchestration — and I'm looking to bring
-      that to a forward-deployed engineering role at an AI-native startup.
+      Computer scientist and engineer working at the intersection of markets and machine
+      learning. I design and build LLM-powered systems — retrieval, tool-use, multi-step
+      orchestration — alongside a broader body of ML and software engineering work.
     </p>
     <div class="hero-links">
       <a class="btn btn-primary" href="mailto:siddharthsaha03@gmail.com">Email me</a>
@@ -53,11 +52,10 @@
       skin cancer classifier to a Retrieval-Augmented Generation research assistant.
     </p>
     <p>
-      I'm actively pivoting into agentic systems engineering — designing LLM agents that
-      plan, call tools, recover from failure, and hold up in production, not just in a
-      demo. My near-term goal is a forward-deployed engineer or software engineer role
-      at an AI-native company in NYC or SF, where I can pair deep technical build work
-      with direct customer problem-solving.
+      A lot of my recent work centers on agentic systems engineering — designing LLM
+      agents that plan, call tools, recover from failure, and hold up in production, not
+      just in a demo. Across my projects I try to pair deep technical build work with
+      practical, real-world problem-solving.
     </p>
   </section>
 
@@ -204,7 +202,7 @@
 
   <section id="contact" class="container section contact">
     <h2>Get in touch</h2>
-    <p>Open to forward-deployed engineer and software engineer roles at AI-native companies in NYC and SF.</p>
+    <p>Always happy to talk about engineering, machine learning, or agent design.</p>
     <a class="btn btn-primary" href="mailto:siddharthsaha03@gmail.com">siddharthsaha03@gmail.com</a>
   </section>
 
@@ -213,32 +211,6 @@
 <footer class="site-footer container">
   <p>&copy; 2026 Siddharth Saha</p>
 </footer>
-
-<script>
-  // Per-firm links (Option A): give each firm a URL like  ?ref=jane-street
-  // Add a firm by putting its slug -> display name here, then share
-  //   https://<your-site>/?ref=<slug>
-  // The slug is just a label for personalization/tracking, not a password —
-  // the privacy comes from the site living at an unguessable base URL.
-  const FIRMS = {
-    "jane-street":   "Jane Street",
-    "two-sigma":     "Two Sigma",
-    "anthropic":     "Anthropic",
-    // "acme-ai":     "Acme AI",
-  };
-
-  (function () {
-    const params = new URLSearchParams(window.location.search);
-    const slug = (params.get("ref") || "").toLowerCase().trim();
-    if (!slug) return;
-    const firm = FIRMS[slug];
-    if (!firm) return;
-    const el = document.getElementById("prepared-for");
-    el.textContent = "Prepared for " + firm;
-    el.hidden = false;
-    document.title = "Siddharth Saha — Portfolio (" + firm + ")";
-  })();
-</script>
 
 </body>
 </html>

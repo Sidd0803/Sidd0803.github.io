@@ -76,19 +76,6 @@ body {
   padding-bottom: 64px;
 }
 
-.prepared-for {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  border-radius: 999px;
-  padding: 4px 12px;
-  margin: 0 0 20px;
-}
-
 .eyebrow {
   font-family: var(--font-mono);
   color: var(--accent);
