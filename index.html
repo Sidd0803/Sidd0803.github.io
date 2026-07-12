@@ -122,44 +122,44 @@
         <h3>PitchList</h3>
         <p class="work-tagline">AI sales-intelligence platform for roofing distributor reps</p>
       </div>
-      <p class="work-summary">Scrapes a sales territory's roofing contractors, scores each lead 0–100 with an explainable model, and drafts a ready-to-use sales brief — so reps know who to call first, and why.</p>
+      <p class="work-summary">A sales-intelligence dashboard that scrapes and ranks GAF roofing contractors into a prioritized lead queue with AI-written briefs, plus a shared prospect pipeline reps can work and export.</p>
       <ul class="work-highlights">
-        <li>Deterministic, explainable lead scoring — not a black-box LLM number.</li>
-        <li>Structured-output sales briefs, plus an on-demand agentic deep-research dive per account.</li>
-        <li>Frozen API contract between the scraper/AI pipeline and the UI, so both could evolve in parallel.</li>
+        <li>Reverse-engineered GAF's Coveo-backed search — bootstraps a public bearer token in a headless browser, then hits the search API directly instead of brittle HTML scraping.</li>
+        <li>Lead scores and AI briefs are precomputed into Postgres; the Next.js dashboard reads from those tables, never writing live.</li>
+        <li>Shared prospect pipeline with lifecycle status, notes, follow-up dates, and archiving that preserves contractor facts — plus CSV / XLSX export.</li>
       </ul>
-      <div class="project-tags"><span>FastAPI</span><span>Postgres</span><span>Playwright</span><span>OpenAI</span><span>Perplexity</span><span>Next.js</span></div>
-      <!-- TODO(links): public repo URL? live demo URL? short screen recording? -->
+      <div class="project-tags"><span>Next.js</span><span>Postgres</span><span>Python</span><span>Coveo</span><span>Playwright</span><span>OpenAI</span></div>
+      <!-- TODO(links): Sidd will add repo/demo URL once repo visibility is toggled -->
     </article>
 
     <article class="work-card">
       <div class="work-head">
         <h3>ClaimsTriage</h3>
-        <p class="work-tagline"><!-- TODO: one-line what-it-is + who it's for --></p>
+        <p class="work-tagline">Vertical AI agent for Medicare inpatient claims review</p>
       </div>
-      <p class="work-summary"><!-- TODO: one-sentence summary --></p>
+      <p class="work-summary">Automates the first pass on Medicare claims: enriches each claim, runs deterministic anomaly checks, gets an LLM approve / deny / escalate decision, drafts the response letter, and routes it to a human reviewer.</p>
       <ul class="work-highlights">
-        <li><!-- TODO: highlight --></li>
-        <li><!-- TODO: highlight --></li>
-        <li><!-- TODO: highlight --></li>
+        <li>LangGraph pipeline (enrich → coverage → anomalies → route → decide → draft); high-severity anomalies bypass the LLM for a deterministic auto-decision.</li>
+        <li>Human-in-the-loop reviewer UI — nothing auto-finalizes; every decision can be overridden, annotated, and resolved.</li>
+        <li>Fixed, reproducible 200-claim eval pool with golden-claim regression tests pinning critical invariants (e.g. an ambiguous auto-decision must escalate, never wrongly deny).</li>
       </ul>
-      <div class="project-tags"><!-- TODO: tags --></div>
-      <!-- TODO(links): repo? demo? recording? -->
+      <div class="project-tags"><span>Python</span><span>LangGraph</span><span>OpenAI</span><span>Postgres</span><span>Streamlit</span></div>
+      <!-- TODO(links): Sidd will add repo/demo URL once repo visibility is toggled -->
     </article>
 
     <article class="work-card">
       <div class="work-head">
         <h3>PartSelect AI Assistant</h3>
-        <p class="work-tagline"><!-- TODO: one-line what-it-is + who it's for --></p>
+        <p class="work-tagline">Scoped, tool-using chat agent for appliance-parts support</p>
       </div>
-      <p class="work-summary"><!-- TODO: one-sentence summary --></p>
+      <p class="work-summary">A support agent for PartSelect refrigerator &amp; dishwasher parts — it answers part lookups, model-compatibility checks, and repair questions by calling deterministic tools over a scraped catalog, and refuses out-of-scope requests.</p>
       <ul class="work-highlights">
-        <li><!-- TODO: highlight --></li>
-        <li><!-- TODO: highlight --></li>
-        <li><!-- TODO: highlight --></li>
+        <li>A single Claude tool-use loop handles intent routing, entity extraction, and tool selection in one model call — no hand-rolled router.</li>
+        <li>Compatibility is deterministic (table membership, never inferred): five pure lookup tools over an indexed Postgres catalog, each returning a status.</li>
+        <li>Swapped an 11 MB in-memory compatibility index for a single indexed row read, so memory no longer scales with the catalog; the scraper clears TLS/JA3 bot protection via <code>curl_cffi</code> Chrome impersonation.</li>
       </ul>
-      <div class="project-tags"><!-- TODO: tags --></div>
-      <!-- TODO(links): repo? demo? recording? -->
+      <div class="project-tags"><span>Python</span><span>Claude</span><span>Tool-use</span><span>Postgres</span><span>Streamlit</span></div>
+      <!-- TODO(links): Sidd will add repo/demo URL once repo visibility is toggled -->
     </article>
   </section>
 
