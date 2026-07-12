@@ -241,12 +241,84 @@ body {
 /* Screenshot preview banner (bleeds to the card's padded edges) */
 .work-shot {
   display: block;
+  position: relative;
   margin: -26px -28px 22px;
   height: 260px;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   border-radius: 12px 12px 0 0;
   background: #f4f5f7;
+}
+
+/* "Live app" badge pinned to the screenshot */
+.work-shot-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(11, 13, 18, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(4px);
+}
+
+/* Pulsing "live" dot, reused by the badge and the button */
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+  animation: live-pulse 2s infinite;
+}
+
+@keyframes live-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Prominent "Visit live app" call-to-action */
+.work-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #06202b;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.work-live:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(125, 211, 252, 0.28);
+}
+
+.work-live .arrow {
+  transition: transform 0.15s ease;
+}
+
+.work-live:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot { animation: none; }
+  .work-live { transition: none; }
 }
 
 .work-shot img {
