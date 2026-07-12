@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Siddharth Saha — Portfolio</title>
 <meta name="description" content="Siddharth Saha — Agentic systems engineer building production LLM agents. Northwestern CS grad, equity derivatives trader pivoting into AI-native engineering.">
+<!-- Keep this site out of search engines / discovery (Option A: unlisted). -->
+<meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,6 +27,7 @@
 <main>
 
   <section id="top" class="hero container">
+    <p class="prepared-for" id="prepared-for" hidden></p>
     <p class="eyebrow">Agentic Systems Engineer</p>
     <h1>Siddharth Saha</h1>
     <p class="hero-sub">
@@ -210,6 +213,32 @@
 <footer class="site-footer container">
   <p>&copy; 2026 Siddharth Saha</p>
 </footer>
+
+<script>
+  // Per-firm links (Option A): give each firm a URL like  ?ref=jane-street
+  // Add a firm by putting its slug -> display name here, then share
+  //   https://<your-site>/?ref=<slug>
+  // The slug is just a label for personalization/tracking, not a password —
+  // the privacy comes from the site living at an unguessable base URL.
+  const FIRMS = {
+    "jane-street":   "Jane Street",
+    "two-sigma":     "Two Sigma",
+    "anthropic":     "Anthropic",
+    // "acme-ai":     "Acme AI",
+  };
+
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const slug = (params.get("ref") || "").toLowerCase().trim();
+    if (!slug) return;
+    const firm = FIRMS[slug];
+    if (!firm) return;
+    const el = document.getElementById("prepared-for");
+    el.textContent = "Prepared for " + firm;
+    el.hidden = false;
+    document.title = "Siddharth Saha — Portfolio (" + firm + ")";
+  })();
+</script>
 
 </body>
 </html>
